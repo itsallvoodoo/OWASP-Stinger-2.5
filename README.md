@@ -1,6 +1,6 @@
 OWASP Stinger Release 2.5
 
-<b>THIS IS IN NO WAY SHAPE OR FORM AFFILIATED WITH OWASP, JUST A FORK OF THEIR OPEN SOURCE CODE<b></br>
+<b>THIS IS IN NO WAY SHAPE OR FORM AFFILIATED WITH OWASP, JUST A FORK OF THEIR OPEN SOURCE CODE</b></br>
 Please visit their [website](https://www.owasp.org/index.php/OWASP_Stinger_Version_2) for more information
 
 <b>Overview</b>
