@@ -28,7 +28,6 @@ import java.util.logging.Logger;
 import java.util.logging.LogRecord;
 import java.util.logging.Level;
 import java.util.logging.FileHandler;
-import org.apache.commons.lang3.StringEscapeUtils;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletResponse;
@@ -110,7 +109,7 @@ public class Log extends AbstractAction {
 			message = message.replace("%js", "NULL");
 		}
 		
-		logger.log(new LogRecord(Level.parse(level.toUpperCase()), StringEscapeUtils.escapeJava(message)));
+		logger.log(new LogRecord(Level.parse(level.toUpperCase()), message));
 		
 		return CONTINUE;
 	}
