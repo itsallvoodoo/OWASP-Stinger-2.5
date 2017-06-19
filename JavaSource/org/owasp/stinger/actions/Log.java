@@ -39,8 +39,9 @@ import org.owasp.stinger.util.CryptoException;
 import org.owasp.stinger.util.Encoder;
 
 public class Log extends AbstractAction {
-	
-	private static Logger logger = Logger.getLogger("org.owasp.stinger.actions.Log");
+
+	/** Making final to address HPE Fortify finding **/
+	private static final Logger logger = Logger.getLogger("org.owasp.stinger.actions.Log");
 	
 	private static FileHandler handler = null;
 	

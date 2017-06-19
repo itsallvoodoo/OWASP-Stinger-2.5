@@ -35,6 +35,7 @@ import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
 import javax.servlet.ServletContext;
+import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.Document;
@@ -76,6 +77,8 @@ public class RuleSet {
 		
 		try {
 			bf = DocumentBuilderFactory.newInstance();
+			bf.setValidating(true);				// Setting this to enable XML validation
+			bf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);		// Limit XML External Entity Inject
 			doc = bf.newDocumentBuilder().parse(new File(fileName));
 		} catch (Exception e) {
 			context.log("[Stinger-Filter] (Error): exception while paring xml file", e);
